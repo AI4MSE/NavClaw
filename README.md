@@ -7,7 +7,7 @@
 
 **智能导航路线规划** — 支持 OpenClaw 集成，也可独立使用。避堵规划 · 极限搜索优化方案 · 兼容 iOS 和 Android · 链接一键跳转手机导航 APP。附加工具箱：天气查询、周边地点搜索、地理编码、行政区划查询等。目前支持高德，后续扩展。
 
-**Intelligent route planner** — standalone or powered by OpenClaw. Congestion avoidance, exhaustive route optimization, iOS & Android deep links that open your navigation app in one tap.Bonus toolbox: weather, POI search, geocoding, district query, etc. Currently supports Amap, more platforms coming
+**Intelligent route planner** — standalone or powered by OpenClaw. Congestion avoidance, exhaustive route optimization, iOS & Android deep links that open your navigation app in one tap.Bonus toolbox like  weather, POI search, geocoding, district query, etc. Currently supports Amap, more platforms coming
 
 首版支持高德，后续扩展 / First supported platform: **Amap 高德** · 你可以贡献来使它更多平台支持 / More coming soon & Wecome your contribution.
 

@@ -1,7 +1,7 @@
 ---
 name: navclaw
-description: Personal AI Navigation Assistant — Exhaustive route search with smart detour that may outperform official recommendations. One-tap deep links for iOS/Android. Bonus toolbox: weather, POI search, geocoding, district query, etc. Currently supports Amap, more platforms coming 
-version: 0.1.0
+description: Personal AI Navigation Assistant — Exhaustive route search with smart detour that may outperform official recommendations. One-tap deep links for iOS/Android. Bonus toolbox like weather, POI search, geocoding, district query, etc. Currently supports Amap, more platforms coming 
+version: 0.1.2
 icon: 🦀
 ---
 
