@@ -279,7 +279,8 @@ NavClaw/
 ## 环境要求
 
 - Python 3.8+
-- `requests` 库（OpenClaw 环境自动安装；或 `pip install -r requirements.txt`）
+- 唯一的第三方依赖就是 requests，其余全是标准库
+  - `requests` 库（OpenClaw 环境自动安装；或 `pip install -r requirements.txt`）
 - Amap Web 高德服务 API Key
 
 ## 许可证
