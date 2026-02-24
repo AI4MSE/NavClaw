@@ -1,0 +1,15 @@
+# NavClaw
+config.py
+log/
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
