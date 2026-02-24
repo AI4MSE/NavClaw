@@ -5,9 +5,9 @@
 [![ClawHub](https://img.shields.io/badge/ClawHub-navclaw-orange)](https://clawhub.ai/AI4MSE/navclaw)
 [![GitHub stars](https://img.shields.io/github/stars/AI4MSE/NavClaw?style=social)](https://github.com/AI4MSE/NavClaw/stargazers)
 
-**智能导航路线规划** — 支持 OpenClaw 集成，也可独立使用。避堵规划 · 极限搜索优化方案 · 兼容 iOS 和 Android · 链接一键跳转手机导航 APP。
+**智能导航路线规划** — 支持 OpenClaw 集成，也可独立使用。避堵规划 · 极限搜索优化方案 · 兼容 iOS 和 Android · 链接一键跳转手机导航 APP。附加工具箱：天气查询、周边地点搜索、地理编码、行政区划查询等。目前支持高德，后续扩展。
 
-**Intelligent route planner** — standalone or powered by OpenClaw. Congestion avoidance, exhaustive route optimization, iOS & Android deep links that open your navigation app in one tap.
+**Intelligent route planner** — standalone or powered by OpenClaw. Congestion avoidance, exhaustive route optimization, iOS & Android deep links that open your navigation app in one tap.Bonus toolbox: weather, POI search, geocoding, district query, etc. Currently supports Amap, more platforms coming
 
 首版支持高德，后续扩展 / First supported platform: **Amap 高德** · 你可以贡献来使它更多平台支持 / More coming soon & Wecome your contribution.
 
@@ -74,7 +74,7 @@ Phase 5: ⚓ 路线固化   → 用途经点锁定路线，确保导航可复现
 
 NavClaw 的最大用户群是 OpenClaw AI Agent。
 
-### 方式一：更新长期记忆
+### 方式一：更新长期记忆（不推荐，临时用）
 
 将以下内容贴入 OpenClaw 的长期记忆（路径和地址按你的环境修改）：
 
@@ -119,7 +119,7 @@ NavClaw 的最大用户群是 OpenClaw AI Agent。
 - 如果用户没有，引导获取：高德开放平台 https://lbs.amap.com/ → 控制台 → 创建应用 → 添加 Key（Web 服务）
 - 拿到后写入 config.py 的 API_KEY 字段
 ```
-### 方式二：安装 OpenClaw 技能
+### 方式二：安装 OpenClaw 技能（推荐）
 
 NavClaw 已包含标准技能清单 `SKILL.md`，支持以下安装方式：
 
