@@ -127,7 +127,7 @@ def main():
     parser.add_argument("--top-y", type=int, default=None,
                        help="精筛选 Top Y (默认: 5)")
     parser.add_argument("--max-iter", type=int, default=None,
-                       help="最大迭代次数 (默认: 1)")
+                       help="最大迭代次数 (默认: 0)")
     parser.add_argument("--anchor-count", type=int, default=None,
                        help="锚点数量 (默认: 10)")
     
