@@ -1,7 +1,7 @@
 ---
 name: navclaw
 description: 个人AI导航助手 — 极限搜索避堵方案，实测智能绕行可能比官方方案更优。一键跳转手机导航APP（iOS/Android）。附加工具箱：天气查询、周边地点搜索、地理编码、行政区划查询等。目前支持高德，后续扩展。 Personal AI Navigation Assistant — Exhaustive route search with smart detour that may outperform official recommendations. One-tap deep links for iOS/Android. Bonus toolbox like weather, POI search, geocoding, district query, etc. Currently supports Amap, more platforms coming
-version: 0.1.5
+version: 0.1.6
 icon: 🦀
 ---
 
@@ -31,7 +31,12 @@ export API_KEY="你的高德API Key"
 **输出格式**：
 
 
-- **Mattermost（原生支持，推荐优先使用）**：需要先在 `config.py` 中配置 `MM_BASEURL`、`MM_BOT_TOKEN`、`MM_CHANNEL_ID`，然后直接运行 `wrapper.py --origin "起点" --dest "终点"`，自动发送 3 条消息 + 日志附件。
+- **Mattermost（原生支持，推荐优先使用）**：需要先在 `config.py` 中配置 `MM_BASEURL`、`MM_BOT_TOKEN`、`MM_CHANNEL_ID`，然后直接运行 `wrapper.py --origin "起点" --dest "终点"`，自动发送 3 条消息 + 日志附件（优先采用Mattermost 消息和日志附件，如果不成功则用备份方案）。
+
+### Mattermost 发文件附件
+OpenClaw Mattermost 插件不支持原生附件，用 curl 直调 API：
+1. POST /api/v4/files 上传文件，拿 file_id
+2. POST /api/v4/posts 发帖，带 file_ids 字段
 
 - **其他聊天工具（备份方案）**：运行 `wrapper.py --origin "起点" --dest "终点" --no-send`，结果输出到 stdout，OpenClaw 读取后转发给用户即可。stdout 格式如下：
 OpenClaw 可读取 stdout 按 `📨 消息 1/2/3` 分段转发给用户。日志文件路径在末尾 `📝 日志: log/navclaw/...` 行中，不要发路径，要读取后发出来，如果不能发附件，给发原文内容。
