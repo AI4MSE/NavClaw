@@ -15,7 +15,7 @@
 ## 核心特性 / Highlights
 
 - 🔍 **极限搜索** — 多策略并发查询，可以短时间拿到**(如高德)官方所有推荐进行对比**，并生成数十种绕行组合， / Exhaustive search with dozens of bypass combinations
-- 🚧 **智能避堵** — 基于 TMC 数据识别拥堵段，自动生成绕行方案，一定概率可***比官方推荐的更省时*** （参考下面实际案例） / Smart congestion detection & auto-detour
+- 🚧 **智能避堵** — 基于 TMC 数据识别拥堵段，自动生成绕行方案，一定概率可**比官方推荐的更省时** （参考下面实际案例） / Smart congestion detection & auto-detour
 - 📱 **一键导航** — iOS / Android 深度链接，点击直接跳转导航 APP / One-tap deep links for iOS & Android
 - 🤖 **OpenClaw 原生** — AI Agent 技能，说"从北京到广州导航"即可 / Say *"navigate from A to B"* and it runs
 - 🔌 **聊天平台** — 内置原生 Mattermost支持，，可扩展更多平台 - **其他任何聊天工具如微信可先临时借助OpenClaw能力**转发/ Mattermost built-in, extensible to other platforms
