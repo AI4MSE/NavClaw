@@ -106,9 +106,10 @@ NavClaw 的最大用户群是 OpenClaw AI Agent。
 
 目前内置支持：**Mattermost**（通过 `wrapper.py`）。
 
-需要 Slack、Discord、微信等其他平台？可以：
-- 自行扩展 `wrapper.py` 代码
-- 让你的 OpenClaw AI 阅读现有 Mattermost 代码，帮你适配新平台
+- 当然**最简单**的办法就是聊天告诉Openclaw 自己运行和读取结果发送给你，支持任何聊天平台扩展，稳定性和支持上下文长度取决于你的大模型API
+- 如果想节约token需要那么需要让AI帮你开发一个接口或者，比如需要 Slack、Discord、微信等其他平台？可以：
+ - 自行扩展 `wrapper.py` 代码
+ - 让你的 OpenClaw AI 阅读现有 Mattermost 代码，帮你适配新平台
 
 ## 实测案例：北京南站 → 广州南站
 
