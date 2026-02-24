@@ -1,0 +1,20 @@
+# 敏感配置（含 API Key）
+config.py
+
+# 运行日志
+log/
+
+# Python 缓存
+__pycache__/
+*.pyc
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
