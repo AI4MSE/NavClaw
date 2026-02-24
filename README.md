@@ -285,6 +285,5 @@ NavClaw/
 ## 许可证
 
 [Apache License 2.0](LICENSE)
+🌐 [NavClaw.com](https://navclaw.com) (Reserved Only)
 
-🌐 [NavClaw.com](https://navclaw.com) # NavClaw
-to be update
