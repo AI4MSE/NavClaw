@@ -1,7 +1,7 @@
 ---
 name: navclaw
 description: 个人AI导航助手 — 极限搜索避堵方案，实测智能绕行可能比官方方案更优。一键跳转手机导航APP（iOS/Android）。附加工具箱：天气查询、周边地点搜索、地理编码、行政区划查询等。目前支持高德，后续扩展。 Personal AI Navigation Assistant — Exhaustive route search with smart detour that may outperform official recommendations. One-tap deep links for iOS/Android. Bonus toolbox like weather, POI search, geocoding, district query, etc. Currently supports Amap, more platforms coming
-version: 0.1.2
+version: 0.1.5
 icon: 🦀
 ---
 
@@ -30,29 +30,16 @@ export API_KEY="你的高德API Key"
 
 **输出格式**：
 
-- **其他聊天工具（通用方法，推荐优先使用）**：运行 `wrapper.py --origin "起点" --dest "终点" --no-send`，结果输出到 stdout，OpenClaw 读取后转发给用户即可。stdout 格式如下：
-- **Mattermost（原生支持）**：需要先在 `config.py` 中配置 `MM_BASEURL`、`MM_BOT_TOKEN`、`MM_CHANNEL_ID`，然后直接运行 `wrapper.py --origin "起点" --dest "终点"`，自动发送 3 条消息 + 日志附件。
 
-**强烈建议先用通用方法（`--no-send`）**，确认结果正确后再配置特定平台。stdout 格式如下：
+- **Mattermost（原生支持，推荐优先使用）**：需要先在 `config.py` 中配置 `MM_BASEURL`、`MM_BOT_TOKEN`、`MM_CHANNEL_ID`，然后直接运行 `wrapper.py --origin "起点" --dest "终点"`，自动发送 3 条消息 + 日志附件。
 
-```
-────────────────────────────────────────────────────────────
-📨 消息 1
-────────────────────────────────────────────────────────────
-（完整对比表格：所有基准 + 绕行方案，含时间/里程/拥堵%/收费等）
+- **其他聊天工具（备份方案）**：运行 `wrapper.py --origin "起点" --dest "终点" --no-send`，结果输出到 stdout，OpenClaw 读取后转发给用户即可。stdout 格式如下：
+OpenClaw 可读取 stdout 按 `📨 消息 1/2/3` 分段转发给用户。日志文件路径在末尾 `📝 日志: log/navclaw/...` 行中，不要发路径，要读取后发出来，如果不能发附件，给发原文内容。
+（一定要原样发给用户，各个消息，特别是链接要保留，不能舍弃）
 
-────────────────────────────────────────────────────────────
-📨 消息 2
-────────────────────────────────────────────────────────────
-（快速导航链接：最快绕行 + 最少拥堵 + Android/iOS deep link）
+**强烈建议先用原生方法**
 
-────────────────────────────────────────────────────────────
-📨 消息 3
-────────────────────────────────────────────────────────────
-（最终推荐：综合时间榜 / 拥堵最少榜 / 官方基准榜 + 一键导航链接）
-```
 
-OpenClaw 可读取 stdout 按 `📨 消息 1/2/3` 分段转发给用户。日志文件路径在末尾 `📝 日志: log/navclaw/...` 行中。
 
 **安装配置**：`pip install requests` → `cp config_example.py config.py` → 编辑填入高德 API Key、默认终点、Mattermost 配置（可选）。
 

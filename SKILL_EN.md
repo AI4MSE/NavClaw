@@ -1,7 +1,7 @@
 ---
 name: navclaw
 description: Personal AI Navigation Assistant — Exhaustive route search with smart detour that may outperform official recommendations. One-tap deep links for iOS/Android. Bonus toolbox like weather, POI search, geocoding, district query, etc. Currently supports Amap, more platforms coming 
-version: 0.1.2
+version: 0.1.5
 icon: 🦀
 ---
 
@@ -30,29 +30,12 @@ export API_KEY="your_amap_api_key"
 
 **Output format**:
 
-- **Universal method (recommended first)**: Run `wrapper.py --origin "A" --dest "B" --no-send`, results output to stdout. OpenClaw reads and forwards to user. stdout format:
-- **Mattermost (built-in)**: Configure `MM_BASEURL`, `MM_BOT_TOKEN`, `MM_CHANNEL_ID` in `config.py`, then run `wrapper.py --origin "A" --dest "B"` to auto-send 3 messages + log attachment.
 
-**Strongly recommended to use universal method (`--no-send`) first**, verify results, then configure specific platforms. stdout format:
+- **Mattermost (recommended first，built-in)**: Configure `MM_BASEURL`, `MM_BOT_TOKEN`, `MM_CHANNEL_ID` in `config.py`, then run `wrapper.py --origin "A" --dest "B"` to auto-send 3 messages + log attachment.
 
-```
-────────────────────────────────────────────────────────────
-📨 Message 1
-────────────────────────────────────────────────────────────
-(Full comparison table: all baselines + bypass routes, with time/distance/congestion%/toll)
+- **Universal method (back plan)**: Run `wrapper.py --origin "A" --dest "B" --no-send`, results output to stdout. OpenClaw reads and forwards to user. stdout format:
 
-────────────────────────────────────────────────────────────
-📨 Message 2
-────────────────────────────────────────────────────────────
-(Quick navigation links: fastest bypass + least congestion + Android/iOS deep links)
-
-────────────────────────────────────────────────────────────
-📨 Message 3
-────────────────────────────────────────────────────────────
-(Top recommendations: time ranking / congestion ranking / official baseline + one-tap navigation links)
-```
-
-OpenClaw can read stdout and forward by splitting on `📨 Message 1/2/3`. Log file path appears at the end of stdout, look for the line containing `log/navclaw/`.
+OpenClaw can read stdout and forward by splitting on `📨 Message 1/2/3`. Log file path appears at the end of stdout, look for the line containing `log/navclaw/`. You read log and send it to. Not log path. I need to read the log.
 
 **Installation**: `pip install requests` → `cp config_example.py config.py` → edit with Amap API Key, default destination, Mattermost config (optional).
 
