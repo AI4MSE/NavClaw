@@ -80,6 +80,8 @@ NavClaw 的最大用户群是 OpenClaw AI Agent。
 ```markdown
 ### 🗺️ NavClaw — 智能导航路线规划技能
 
+### 🗺️ NavClaw — 智能导航路线规划技能
+
 **触发方式**：用户说"从 [起点] 到 [终点] 导航"即可自动执行
 
 **特殊规则**：
@@ -87,19 +89,34 @@ NavClaw 的最大用户群是 OpenClaw AI Agent。
 - 示例："从北京南站到家" → 路线目的地为 config.py 配置的默认终点
 
 **工作流程**：
-1. 调用 /path/to/NavClaw/wrapper.py --origin "起点" --dest "终点"
+1. 调用 /path/to/NavClaw/wrapper.py --origin "起点" --dest "终点" --no-send
 2. wrapper.py 加载 config.py，调用 navclaw.py 执行 Phase 1-5 规划
-3. 生成 40+ 条路线方案（含绕行优化）
-4. 自动发送 3 条 Mattermost 消息 + 日志附件：
+3. 生成大量路线方案（含绕行优化）
+4. stdout 输出 3 条消息，按 `📨 消息 1/2/3` 分隔：
    - 📨 消息 1 — 完整对比表格（所有基准 + 绕行方案）
    - 📨 消息 2 — 快速导航链接（最快绕行 + 最少拥堵）
-   - 📨 消息 3 — 最终推荐（时间榜 / 拥堵榜 / 基准榜）+ 一键深度链接
+   - 📨 消息 3 — 最终推荐（时间榜 / 拥堵榜 / 基准榜）+ iOS/Android 一键深度链接
+5. 读取 stdout 结果，将 3 条消息逐条转发给用户
+6. 日志文件路径在末尾 `📝 日志:` 行中，可选发送给用户
+
+**注意**：
+- 默认使用 `--no-send`（通用模式），由 OpenClaw 读取结果后转发给用户
+- 如果用户使用的是 Mattermost，可去掉 `--no-send`，wrapper.py 会自动发送到 Mattermost 频道。需在 config.py 中额外配置：
+  - `MM_BASEURL`：Mattermost 服务器地址（如 `https://mm.example.com`）
+  - `MM_BOT_TOKEN`：Bot 令牌
+  - `MM_CHANNEL_ID`：目标频道 ID
 
 **文件位置**：
 - 调用入口：/path/to/NavClaw/wrapper.py
 - 核心引擎：/path/to/NavClaw/navclaw.py
 - 配置文件：/path/to/NavClaw/config.py
 - 日志目录：/path/to/NavClaw/log/
+
+**API Key（重要）**：
+- 首次使用前，先在记忆中查找用户是否已提供过高德 API Key
+- 如果没有找到，询问用户是否有高德 API Key
+- 如果用户没有，引导获取：高德开放平台 https://lbs.amap.com/ → 控制台 → 创建应用 → 添加 Key（Web 服务）
+- 拿到后写入 config.py 的 API_KEY 字段
 ```
 ### 方式二：安装 OpenClaw 技能
 
