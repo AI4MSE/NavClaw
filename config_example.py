@@ -64,7 +64,7 @@ MAX_BYPASS = 7                # 最多绕行聚合段数 / max bypass cluster co
 BEFORE_OFF = 4000             # 绕行前偏移(m) / bypass offset before congestion
 AFTER_OFF = 4000              # 绕行后偏移(m) / bypass offset after congestion
 API_MAX_WP = 16               # API 最大途经点数 / max waypoints per API call
-MAX_ITER = 1                  # Phase 4 迭代轮数(0=关闭) / iteration rounds (0=off)
+MAX_ITER = 0                  # Phase 4 迭代轮数(0=关闭) / iteration rounds (0=off)
 ITER_CANDIDATES = 3           # 每轮迭代候选数 / candidates per iteration
 ANCHOR_COUNT = 10             # Phase 5 固化锚点数 / route anchoring waypoint count
 
