@@ -3,6 +3,7 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8+-green.svg)](https://www.python.org/)
 [![GitHub stars](https://img.shields.io/github/stars/AI4MSE/NavClaw?style=social)](https://github.com/AI4MSE/NavClaw/stargazers)
+[ClawHub: navclaw](https://clawhub.ai/AI4MSE/navclaw)
 
 **智能导航路线规划** — 支持 OpenClaw 集成，也可独立使用。避堵规划 · 极限搜索优化方案 · 兼容 iOS 和 Android · 链接一键跳转手机导航 APP。
 
