@@ -1,7 +1,7 @@
 ---
 name: navclaw
 description: 个人AI导航助手 — 极限搜索避堵方案，实测智能绕行可能比官方方案更优。一键跳转手机导航APP（iOS/Android）。附加工具箱：天气查询、周边地点搜索、地理编码、行政区划查询等。目前支持高德，后续扩展。 Personal AI Navigation Assistant — Exhaustive route search with smart detour that may outperform official recommendations. One-tap deep links for iOS/Android. Bonus toolbox like weather, POI search, geocoding, district query, etc. Currently supports Amap, more platforms coming
-version: 0.1.6
+version: 0.1.7
 icon: 🦀
 ---
 
@@ -46,7 +46,7 @@ OpenClaw 可读取 stdout 按 `📨 消息 1/2/3` 分段转发给用户。日志
 
 
 
-**安装配置**：`pip install requests` → `cp config_example.py config.py` → 编辑填入高德 API Key、默认终点、Mattermost 配置（可选）。
+**安装配置**：`pip install requests` → `cp config_example.py config.py` → 编辑填入高德 API Key、默认终点、Mattermost 配置（可选，包括MM_BASEURL，MM_BOT_TOKEN，MM_CHANNEL_ID，如果记忆或者配置没有，提示用户给出，如果用户没有就忽略。如果有，要写入config.py对应位置）。
 
 **文件位置**：调用入口 `wrapper.py`，核心引擎 `navclaw.py`，配置 `config.py`（需用户创建），模板 `config_example.py`，日志 `log/`。
 
