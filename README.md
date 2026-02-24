@@ -1,16 +1,16 @@
 # NavClaw 🦀
 
-**智能导航路线规划** — 支持 OpenClaw 集成，也可独立使用。避堵规划 · 极限搜索优化方案 · 兼容 iOS 和 Android · 链接一键跳转导航 APP。
+**智能导航路线规划** — 支持 OpenClaw 集成，也可独立使用。避堵规划 · 极限搜索优化方案 · 兼容 iOS 和 Android · 链接一键跳转手机导航 APP。
 
 **Intelligent route planner** — standalone or powered by OpenClaw. Congestion avoidance, exhaustive route optimization, iOS & Android deep links that open your navigation app in one tap.
 
-首个支持导航平台 / First supported platform: **Amap 高德** · 你可以贡献来使它更多平台支持 / More coming soon & Wecome your contribution.
+首版支持高德，后续扩展 / First supported platform: **Amap 高德** · 你可以贡献来使它更多平台支持 / More coming soon & Wecome your contribution.
 
  [📖 English](README_EN.md) · [GitHub](https://github.com/AI4MSE/NavClaw) · [技术文档](docs/technical_CN.md)
 
 ## 核心特性 / Highlights
 
-- 🔍 **极限搜索** — 多策略并发查询，可以短时间拿到**官方所有推荐进行对比**，并生成数十种绕行组合， / Exhaustive search with dozens of bypass combinations
+- 🔍 **极限搜索** — 多策略并发查询，可以短时间拿到**(如高德)官方所有推荐进行对比**，并生成数十种绕行组合， / Exhaustive search with dozens of bypass combinations
 - 🚧 **智能避堵** — 基于 TMC 数据识别拥堵段，自动生成绕行方案，可能可以***比官方推荐的更省时*** （参考下面实际案例） / Smart congestion detection & auto-detour
 - 📱 **一键导航** — iOS / Android 深度链接，点击直接跳转导航 APP / One-tap deep links for iOS & Android
 - 🤖 **OpenClaw 原生** — AI Agent 技能，说"从北京到广州导航"即可 / Say *"navigate from A to B"* and it runs
@@ -112,6 +112,8 @@ NavClaw 的最大用户群是 OpenClaw AI Agent。
     - 让你的 OpenClaw AI 阅读现有 Mattermost 代码，帮你适配新平台
 
 ## 实测某超长距离复杂迭代案例：北京南站 → 广州南站 （自驾） - NavClaw比官方默认各种推荐省时（迭代绕行MAX_ITER=1）
+
+> （注: 仅当前案例演示，不代表每次都能找到比官方更佳方案，因为路况随时变化，同时手机APP、API等平台算法可能差异，导致预计导航预测时间不一样。但至少能拿到大量方案进行短时间横向对比）
 
 > 运行时间：2026-02-24 · NavClaw v0.1 · 高速路线 2,147 km
 
