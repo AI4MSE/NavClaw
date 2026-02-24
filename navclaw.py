@@ -88,7 +88,7 @@ class PlannerConfig:
     API_MAX_WP: int = field(default_factory=lambda: _c("API_MAX_WP", 16))
 
     # §2.5 Phase 4 迭代优化
-    MAX_ITER: int = field(default_factory=lambda: _c("MAX_ITER", 1))
+    MAX_ITER: int = field(default_factory=lambda: _c("MAX_ITER", 0))
     ITER_CANDIDATES: int = field(default_factory=lambda: _c("ITER_CANDIDATES", 3))
 
     # §2.6 Phase 5 路线固化
