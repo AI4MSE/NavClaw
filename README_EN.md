@@ -1,4 +1,4 @@
-# NavClaw 🦀 - Your Personal AI Navi Planner
+# NavClaw 🦀 - Personal AI Navigation Assistant
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8+-green.svg)](https://www.python.org/)
@@ -68,6 +68,8 @@ NavClaw's primary use case is as an OpenClaw AI agent skill.
 
 Paste the following into OpenClaw's long-term memory (adapt paths and addresses to your setup):
 
+> Memory file: `~/.openclaw/MEMORY.md` (or your workspace `MEMORY.md`). Append to the end of the file. You can also tell OpenClaw in chat: "please remember the following" to update.
+
 ```markdown
 ### 🗺️ NavClaw — Intelligent Route Planner
 
@@ -78,24 +80,59 @@ Paste the following into OpenClaw's long-term memory (adapt paths and addresses 
 - Example: "从北京南站到家" → routes to the address configured in config.py
 
 **Workflow**:
-1. Run: /path/to/NavClaw/wrapper.py --origin "A" --dest "B"
+1. Run: /path/to/NavClaw/wrapper.py --origin "A" --dest "B" --no-send
 2. wrapper.py loads config.py, calls navclaw.py for 5-phase planning
-3. Generates 40+ route candidates including bypass optimization
-4. Auto-sends 3 messages to Mattermost + log file attachment:
+3. Generates many route candidates including bypass optimization
+4. stdout outputs 3 messages, delimited by `📨 消息 1/2/3`:
    - msg1: Full comparison table (all baselines + bypass routes)
    - msg2: Quick navigation links (fastest/least congestion)
-   - msg3: Top recommendations with one-tap deep links
+   - msg3: Top recommendations with one-tap deep links (iOS/Android)
+5. Read stdout results and forward the 3 messages to the user
+6. Log file path is in the `📝 日志:` line at the end (optional to send)
+
+**Note**:
+- Default uses `--no-send` (universal mode), OpenClaw reads results and forwards to user
+- If user is on Mattermost, remove `--no-send` to auto-send to the Mattermost channel. Requires additional config in config.py:
+  - `MM_BASEURL`: Mattermost server URL (e.g. `https://mm.example.com`)
+  - `MM_BOT_TOKEN`: Bot token
+  - `MM_CHANNEL_ID`: Target channel ID
 
 **File locations**:
 - Entry point: /path/to/NavClaw/wrapper.py
 - Core engine: /path/to/NavClaw/navclaw.py
 - Config: /path/to/NavClaw/config.py
 - Logs: /path/to/NavClaw/log/
+
+**API Key (important)**:
+- Before first use, check memory for user's Amap API Key
+- If not found, ask the user if they have one
+- If they don't, guide them: Amap Open Platform https://lbs.amap.com/ → Console → Create App → Add Key (Web Service)
+- Write the key to config.py API_KEY field
 ```
 
-### Option 2: Create a skill
+### Option 2: Install as OpenClaw skill
 
-You can also create a dedicated NavClaw skill for OpenClaw. Refer to OpenClaw's skill documentation.
+NavClaw includes a standard `SKILL.md` manifest. Install via:
+
+**ClawHub (official marketplace)**:
+
+```bash
+clawhub install navclaw
+```
+
+**OpenClaw CN community (clawd.org.cn)**:
+
+```bash
+claw skill install navclaw
+```
+
+**Manual install**:
+
+```bash
+cp -r /path/to/NavClaw ~/.openclaw/workspace/skills/navclaw
+```
+
+> ⚠️ The skill may not yet be published or is pending review. Use **Option 1 (long-term memory)** as a temporary alternative — works identically.
 
 ### Chat platform support
 
@@ -114,7 +151,7 @@ Want Slack, Discord, WeChat, or other platforms? You can:
 | Metric | Value |
 |--------|-------|
 | API calls | 147 |
-| Total time | 100s |
+| Total time | ~30s |
 | Routes evaluated | 41 (10 baseline + 31 bypass) |
 | Congestion clusters detected | 6 (63.7 km total) |
 | Bypass success rate | 126/130 |
@@ -262,6 +299,8 @@ NavClaw/
 ├── wrapper.py          # Chat platform integration layer
 ├── config.py           # Your config (gitignored)
 ├── config_example.py   # Config template with comments
+├── SKILL.md            # OpenClaw skill marketplace manifest
+├── .clawignore         # Skill publish exclusion rules
 ├── requirements.txt    # Python dependencies (requests)
 ├── .gitignore
 ├── LICENSE             # Apache 2.0
@@ -281,4 +320,3 @@ NavClaw/
 
 [Apache License 2.0](LICENSE)
 🌐 [NavClaw.com](https://navclaw.com)  Reserved for Github Page
-Email: NavClaw@NavClaw.com (Fun only. I may not have time to reply)
