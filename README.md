@@ -143,7 +143,24 @@ cp -r /path/to/NavClaw ~/.openclaw/workspace/skills/navclaw
 
 > ⚠️ 技能可能暂未发布或正在审核中。建议先用**方式一（长期记忆）**临时使用，效果完全一样。
 
-### 方式三：制作你的专属 OpenClaw 技能
+### 方式三：直接发消息给 OpenClaw（最简单）
+
+把下面这段话直接发给你的 OpenClaw，让它自己完成安装：
+
+```
+请帮我安装 NavClaw 导航技能：
+
+1. 去 https://github.com/AI4MSE/NavClaw 查看说明文档 README，并下载必要的文件
+2. 建议用长期记忆方式先临时实现（参考仓库 README 中的长期记忆模板，追加到 MEMORY.md）
+3. 复制 config_example.py 为 config.py，高德 API Key 是 API_KEY = xxx（替换为你的真实 Key）
+4. 聊天工具：如果是 Mattermost，先在记忆或配置中找 MM_BASEURL、MM_BOT_TOKEN、MM_CHANNEL_ID 参数，找不到再问我。如果发送不成功或者你不确定我的聊天工具类型，先用通用方式（--no-send）你来转发消息给我
+5. 安装完成后运行一次快速测试验证
+```
+
+> 💡 把 `API_KEY = xxx` 替换为你的真实高德 API Key。如果没有，让 OpenClaw 引导你到 https://lbs.amap.com/ 申请。
+
+
+### 方式四：制作你的专属 OpenClaw 技能
 
 也可以为 NavClaw 创建专属技能文件，参考 OpenClaw 的技能文档格式。
 
