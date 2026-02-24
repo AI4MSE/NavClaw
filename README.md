@@ -298,6 +298,8 @@ NavClaw/
 ├── wrapper.py          # 聊天平台对接层
 ├── config.py           # 你的配置文件（已 gitignore）
 ├── config_example.py   # 配置模板（含注释）
+├── SKILL.md            # OpenClaw 技能市场清单
+├── .clawignore         # 技能发布排除规则（排除 config.py、log/ 等）
 ├── requirements.txt    # Python 依赖（requests）
 ├── .gitignore
 ├── LICENSE             # Apache 2.0
