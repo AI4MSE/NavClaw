@@ -2,8 +2,8 @@
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8+-green.svg)](https://www.python.org/)
+[![ClawHub](https://img.shields.io/badge/ClawHub-navclaw-orange)](https://clawhub.ai/AI4MSE/navclaw)
 [![GitHub stars](https://img.shields.io/github/stars/AI4MSE/NavClaw?style=social)](https://github.com/AI4MSE/NavClaw/stargazers)
-[ClawHub: navclaw](https://clawhub.ai/AI4MSE/navclaw)
 
 **智能导航路线规划** — 支持 OpenClaw 集成，也可独立使用。避堵规划 · 极限搜索优化方案 · 兼容 iOS 和 Android · 链接一键跳转手机导航 APP。
 
@@ -142,7 +142,6 @@ claw skill install navclaw
 cp -r /path/to/NavClaw ~/.openclaw/workspace/skills/navclaw
 ```
 
-> ⚠️ 技能可能暂未发布或正在审核中。建议先用**方式一（长期记忆）**临时使用，效果完全一样。
 
 ### 方式三：直接发消息给 OpenClaw（最简单）
 
@@ -353,7 +352,9 @@ NavClaw/
 
 ## 许可证
 
+
 [Apache License 2.0](LICENSE)
 🌐 [NavClaw.com](https://navclaw.com) (Reserved Only for NavClaw GitHub Page 备用链接跳转Github，非商用目的，仅跳转)
+🦀 [ClawHub: navclaw](https://clawhub.ai/AI4MSE/navclaw)
 
 Email:NavClaw@NavClaw.com (FUN only. I may not have time to reply)
