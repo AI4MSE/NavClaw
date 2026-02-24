@@ -286,5 +286,5 @@ NavClaw/
 ## 许可证
 
 [Apache License 2.0](LICENSE)
-🌐 [NavClaw.com](https://navclaw.com) (Reserved Only)
+🌐 [NavClaw.com](https://navclaw.com) (Reserved Only for NavClaw GitHub Page 备用链接跳转Github，非商用目的，仅跳转)
 
