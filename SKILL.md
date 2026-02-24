@@ -1,6 +1,6 @@
 ---
 name: navclaw
-description: 个人AI导航助手 — 极限搜索避堵方案，实测智能绕行可能比官方方案更优。一键跳转手机导航APP（iOS/Android）。目前支持高德，后续扩展
+description: 个人AI导航助手 — 极限搜索避堵方案，实测智能绕行可能比官方方案更优。一键跳转手机导航APP（iOS/Android）。附加工具箱：天气查询、周边地点搜索、地理编码、行政区划查询等。目前支持高德，后续扩展。/ Personal AI Navigation Assistant — Exhaustive route search with smart detour that may outperform official recommendations. One-tap deep links for iOS/Android. Bonus toolbox: weather, POI search, geocoding, district query, etc. Currently supports Amap, more platforms coming
 version: 0.1.0
 icon: 🦀
 ---
@@ -17,6 +17,11 @@ icon: 🦀
 拿到 Key 后填入 `config.py` 的 `API_KEY` 字段：
 ```python
 API_KEY = "你的高德API Key"
+```
+
+和设置为环境变量（双保险）：
+```bash
+export API_KEY="你的高德API Key"
 ```
 
 **触发方式**：用户说"从 [起点] 到 [终点] 导航"、"导航从 [起点] 到 [终点]"或"navigate from [A] to [B]"即可自动执行。说"到家"时自动替换为 `config.py` 中的 `DEFAULT_DEST`。
@@ -58,6 +63,63 @@ OpenClaw 可读取 stdout 按 `📨 消息 1/2/3` 分段转发给用户。日志
 **性能参考**：短途无拥堵（迭代=0）约 6 秒、15 次 API、10 条路线；长途有拥堵（迭代=1）约 30 秒、150 次 API、40 条路线。首次使用建议 `MAX_ITER = 0` 验证配置正确，`MAX_ITER = 1` 深度优化可能找到比官方更快的路线。
 
 **依赖**：Python 3.8+、`requests`（唯一第三方依赖）、高德 Web 服务 API Key。
+
+---
+
+## 附加功能：地图 API 工具箱
+
+除了核心驾车规划外，NavClaw 的 API Key 同样可以调用高德全套位置服务。以下功能均通过 curl 直接调用，无需额外依赖。
+
+**何时使用**：当用户提到天气查询、地点搜索、地址转坐标、坐标转地址、行政区划等需求时，可直接使用以下接口。
+
+### 1. 天气查询
+
+获取某城市当前天气或未来预报。需要城市 `adcode`，不确定时先用下方行政区划查询获取。
+
+```bash
+# 实时天气（例：北京 adcode=110000）
+curl "https://restapi.amap.com/v3/weather/weatherInfo?key=$API_KEY&city=[adcode]&extensions=base"
+
+# 未来几天预报
+curl "https://restapi.amap.com/v3/weather/weatherInfo?key=$API_KEY&city=[adcode]&extensions=all"
+```
+
+### 2. 周边地点搜索（POI）
+
+按关键词在指定城市范围内检索兴趣点。
+
+```bash
+# 示例：在杭州搜索"咖啡馆"
+curl "https://restapi.amap.com/v3/place/text?key=$API_KEY&keywords=[关键词]&city=[城市名称]"
+```
+
+### 3. 地理编码（地址 → 经纬度）
+
+把文字地址解析为经纬度坐标，驾车规划等接口需要坐标作为输入。
+
+```bash
+curl "https://restapi.amap.com/v3/geocode/geo?key=$API_KEY&address=[地址文本]"
+```
+
+### 4. 逆地理编码（经纬度 → 地址）
+
+将坐标反查为可读的地址描述。
+
+```bash
+# 坐标格式：经度,纬度
+curl "https://restapi.amap.com/v3/geocode/regeo?key=$API_KEY&location=[经度,纬度]"
+```
+
+### 5. 行政区划查询（获取 adcode）
+
+查询省市区街道的行政编码及边界，天气查询等接口依赖 adcode。
+
+```bash
+# 示例：查"北京市"的 adcode
+curl "https://restapi.amap.com/v3/config/district?key=$API_KEY&keywords=[城市或区域名]&subdistrict=0"
+```
+
+---
 
 **作者**：小红书 @深度连接
 
