@@ -2,6 +2,7 @@
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8+-green.svg)](https://www.python.org/)
+[![ClawHub](https://img.shields.io/badge/ClawHub-navclaw-orange)](https://clawhub.ai/AI4MSE/navclaw)
 [![GitHub stars](https://img.shields.io/github/stars/AI4MSE/NavClaw?style=social)](https://github.com/AI4MSE/NavClaw/stargazers)
 
 **Intelligent route planner** — standalone or powered by OpenClaw. Congestion avoidance, exhaustive route optimization, iOS & Android deep links that open your navigation app in one tap.
@@ -336,4 +337,6 @@ NavClaw/
 
 [Apache License 2.0](LICENSE)
 🌐 [NavClaw.com](https://navclaw.com)  Reserved for Github Page
+🦀 [ClawHub: navclaw](https://clawhub.ai/AI4MSE/navclaw)
+
 Email:NavClaw@NavClaw.com (FUN only. I may not have time to reply)
