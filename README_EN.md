@@ -134,6 +134,22 @@ cp -r /path/to/NavClaw ~/.openclaw/workspace/skills/navclaw
 
 > ⚠️ The skill may not yet be published or is pending review. Use **Option 1 (long-term memory)** as a temporary alternative — works identically.
 
+### Option 3: Send a message to OpenClaw directly (easiest)
+
+Copy and send the following message to your OpenClaw:
+
+```
+Please install the NavClaw navigation skill:
+
+1. Go to https://github.com/AI4MSE/NavClaw, read the README docs, and download the necessary files
+2. Use the long-term memory approach for now (see the memory template in the repo README, append to MEMORY.md)
+3. Copy config_example.py to config.py, set API_KEY = xxx (replace with real key)
+4. Chat platform: if I'm on Mattermost, look for MM_BASEURL, MM_BOT_TOKEN, MM_CHANNEL_ID in memory or config first — ask me only if not found. If sending fails or you're unsure of my chat platform, use universal mode (--no-send) and forward results to me yourself
+5. Run a quick test to verify after installation
+```
+
+> 💡 Replace `API_KEY = xxx` with your real Amap API Key. If you don't have one, let OpenClaw guide you to https://lbs.amap.com/ to apply.
+
 ### Chat platform support
 
 Currently supported: **Mattermost** (built-in via `wrapper.py`).
