@@ -4,7 +4,7 @@
 
 First supported navigation platform: **Amap** · More coming soon
 
-🌐 [NavClaw.com](https://navclaw.com) · [📖 中文](README.md) · [GitHub](https://github.com/AI4MSE/NavClaw) · [Technical Doc (CN)](docs/technical_CN.md)
+[📖 中文](README.md) · [GitHub](https://github.com/AI4MSE/NavClaw) · [Technical Doc (CN)](docs/technical_CN.md)
 
 ## Highlights
 
@@ -276,4 +276,4 @@ NavClaw/
 ## License
 
 [Apache License 2.0](LICENSE)
-
+🌐 [NavClaw.com](https://navclaw.com)  Reserved for Github Page
