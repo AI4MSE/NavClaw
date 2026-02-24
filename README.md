@@ -77,9 +77,9 @@ NavClaw 的最大用户群是 OpenClaw AI Agent。
 
 将以下内容贴入 OpenClaw 的长期记忆（路径和地址按你的环境修改）：
 
-```markdown
-### 🗺️ NavClaw — 智能导航路线规划技能
+> 长期记忆文件：`~/.openclaw/MEMORY.md`（或你的工作区 `MEMORY.md`），直接追加到文件末尾即可。也可以在聊天中告诉 OpenClaw "请记住以下内容"来更新。
 
+```markdown
 ### 🗺️ NavClaw — 智能导航路线规划技能
 
 **触发方式**：用户说"从 [起点] 到 [终点] 导航"即可自动执行
