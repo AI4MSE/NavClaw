@@ -10,12 +10,12 @@
 
 ## 核心特性 / Highlights
 
-- 🔍 **极限搜索** — 多策略并发查询，生成数十种绕行组合 / Exhaustive search with dozens of bypass combinations
-- 🚧 **智能避堵** — 基于 TMC 数据识别拥堵段，自动生成绕行方案 / Smart congestion detection & auto-detour
+- 🔍 **极限搜索** — 多策略并发查询，可以短时间拿到***官方所有推荐进行对比**，并生成数十种绕行组合， / Exhaustive search with dozens of bypass combinations
+- 🚧 **智能避堵** — 基于 TMC 数据识别拥堵段，自动生成绕行方案，可能可以***比官方推荐的更省时*** （参考下面实际案例） / Smart congestion detection & auto-detour
 - 📱 **一键导航** — iOS / Android 深度链接，点击直接跳转导航 APP / One-tap deep links for iOS & Android
 - 🤖 **OpenClaw 原生** — AI Agent 技能，说"从北京到广州导航"即可 / Say *"navigate from A to B"* and it runs
 - 🔌 **聊天平台** — 内置 Mattermost，可扩展更多平台 / Mattermost built-in, extensible to other platforms
-- ⚡ **高性能** — 几秒内返回结果（如果迭代=0），40+ 条路线 / Returns in seconds, 40+ routes evaluated
+- ⚡ **高性能** — 可几秒内返回结果（如果迭代=0），40+ 条路线 / Returns in seconds, 40+ routes evaluated
 
 ## 快速开始 / Quick Start
 
@@ -111,7 +111,7 @@ NavClaw 的最大用户群是 OpenClaw AI Agent。
     - 自行扩展 `wrapper.py` 代码
     - 让你的 OpenClaw AI 阅读现有 Mattermost 代码，帮你适配新平台
 
-## 实测案例：北京南站 → 广州南站
+## 实测某超长距离复杂迭代案例：北京南站 → 广州南站 （自驾） - 比官方默认各种推荐省时
 
 > 运行时间：2026-02-24 · NavClaw v0.1 · 高速路线 2,147 km
 
@@ -125,7 +125,7 @@ NavClaw 的最大用户群是 OpenClaw AI Agent。
 | 检测拥堵聚合段 | 6 段（共 63.7 km） |
 | 绕行成功率 | 126/130 |
 
-### 结果：比默认推荐快 22 分钟
+### 结果：比官方默认推荐快 22 分钟
 
 | 榜单 | 方案 | 时间 | 里程 | 拥堵 | 收费 |
 |------|------|------|------|------|------|
@@ -149,7 +149,7 @@ Phase 5: ⚓   9 次 API,  23.7s → 9 条基准路线固化（各 10 个锚点�
 🎯 最终推荐
 
 🏆 综合时间榜（全场最快）
-   [混合] 绕行堵5/5[s33-39-10-iter0]
+   [混合] 绕行堵5/5[s33-39-10-iter0] **本工具推荐，比官方省时**
    ⏱ 22h46m | 2148km | 拥堵3%
    📱 Android: amapuri://route/plan/?slat=39.867679&slon=116.378059&sname=北京南站&dlat=22.989125&dlon=113.277732&dname=广州南站&...
    📱 iOS: iosamap://route/plan/?slat=39.867679&slon=116.378059&sname=北京南站&dlat=22.989125&dlon=113.277732&dname=广州南站&...
@@ -158,7 +158,7 @@ Phase 5: ⚓   9 次 API,  23.7s → 9 条基准路线固化（各 10 个锚点�
    [基准] 不走高速(固化)[s35-1-fix]
    ⏱ 45h20m | 2373km | 拥堵0%
 
-🛡️ 官方基准榜（导航原始推荐）
+🛡️ 官方基准榜（Amap官方导航原始推荐）
    [基准] 默认推荐(固化)[s32-1-fix]
    ⏱ 23h08m | 2147km | 拥堵3%
 ```
@@ -277,12 +277,12 @@ NavClaw/
     └── technical_CN.md # 技术文档
 ```
 
-## 环境要求
+## 运行环境要求
 
 - Python 3.8+
 - 唯一的第三方依赖就是 requests，其余全是标准库
   - `requests` 库（OpenClaw 环境自动安装；或 `pip install -r requirements.txt`）
-- Amap Web 高德服务 API Key
+- Amap高德API Key
 
 ## 许可证
 
