@@ -101,8 +101,32 @@ NavClaw 的最大用户群是 OpenClaw AI Agent。
 - 配置文件：/path/to/NavClaw/config.py
 - 日志目录：/path/to/NavClaw/log/
 ```
+### 方式二：安装 OpenClaw 技能
 
-### 方式二：制作 OpenClaw 技能
+NavClaw 已包含标准技能清单 `SKILL.md`，支持以下安装方式：
+
+**OpenClaw 官方市场（ClawHub）**：
+
+```bash
+clawhub install navclaw
+```
+
+**OpenClaw 中文社区市场（clawd.org.cn）**：
+
+```bash
+claw skill install navclaw
+```
+
+**手动安装（通用）**：
+
+```bash
+# 将 NavClaw 目录复制到 OpenClaw 技能目录
+cp -r /path/to/NavClaw ~/.openclaw/workspace/skills/navclaw
+```
+
+> ⚠️ 技能可能暂未发布或正在审核中。建议先用**方式一（长期记忆）**临时使用，效果完全一样。
+
+### 方式三：制作你的专属 OpenClaw 技能
 
 也可以为 NavClaw 创建专属技能文件，参考 OpenClaw 的技能文档格式。
 
