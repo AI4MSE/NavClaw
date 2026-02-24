@@ -183,3 +183,7 @@ v3 API (兼容):
 | 有拥堵 (如长途有堵) | ~6 | ~12 | ~4 | ~9 | ~35 |
 | 严重拥堵 (多段) | ~6 | ~20 | ~6 | ~12 | ~50 |
 
+## 许可证
+
+[Apache License 2.0](LICENSE)
+🌐 [NavClaw.com](https://navclaw.com) (Reserved Only for NavClaw GitHub Page 备用链接跳转Github，非商用目的，仅跳转)
