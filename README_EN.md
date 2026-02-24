@@ -1,4 +1,8 @@
-# NavClaw 🦀
+# NavClaw 🦀 - Your Personal AI Navi Planner
+
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
+[![Python 3.8+](https://img.shields.io/badge/Python-3.8+-green.svg)](https://www.python.org/)
+[![GitHub stars](https://img.shields.io/github/stars/AI4MSE/NavClaw?style=social)](https://github.com/AI4MSE/NavClaw/stargazers)
 
 **Intelligent route planner** — standalone or powered by OpenClaw. Congestion avoidance, exhaustive route optimization, iOS & Android deep links that open your navigation app in one tap.
 
