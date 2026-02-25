@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-NavClaw — 智能导航路线规划 / OpenSource Intelligent Route Planner for OpenClaw & More
+NavClaw — 个人出行AI导航助手 / OpenSource Intelligent Route Planner for OpenClaw & More
 
 🌐 https://navclaw.com (Reserved for Github Page)
 📦 https://github.com/AI4MSE/NavClaw
@@ -58,7 +58,7 @@ def _c(attr, default):
 class PlannerConfig:
     """所有可调参数集中于此。优先读取 config.py，fallback 到内置默认值。"""
     # §2.1 版本
-    VERSION: str = "0.1"
+    VERSION: str = "0.2.0"
     API_KEY: str = field(default_factory=lambda: _c("API_KEY", ""))
 
     # §2.2 Phase 1 广撒网
@@ -438,7 +438,8 @@ def build_nav_links(origin_coord: str, origin_name: str,
     return links
 
 
-# ═══════════════════════════════════════════════════════════════════
+# 平台显示名映射（用于 Markdown 链接文本）
+_NAV_LABEL = {"Android": "安卓高德导航(点我)", "iOS": "iOS高德导航(点我)", "Web": "网页跳转链接(点我)"}
 # 核心引擎
 # ═══════════════════════════════════════════════════════════════════
 
@@ -1218,7 +1219,7 @@ class RoutePlanner:
             for p, url in build_nav_links(
                     self.origin_coord, self.origin_name,
                     self.dest_coord, self.dest_name, route.waypoints, self.cfg):
-                lines.append(f"   📱 {p}: {url}")
+                lines.append(f"   📱 [{_NAV_LABEL.get(p, p)}]({url})")
             lines.append("")
         lines.append("更多详细信息见附件日志文件")
         return "\n".join(lines)
@@ -1253,7 +1254,7 @@ class RoutePlanner:
             for p, url in build_nav_links(
                     self.origin_coord, self.origin_name,
                     self.dest_coord, self.dest_name, route.waypoints, self.cfg):
-                lines.append(f"   📱 {p}: {url}")
+                lines.append(f"   📱 [{_NAV_LABEL.get(p, p)}]({url})")
             lines.append("")
         return "\n".join(lines)
 

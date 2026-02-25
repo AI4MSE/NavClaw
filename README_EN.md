@@ -9,7 +9,7 @@
 
 First supported navigation platform: **Amap** · More coming soon
 
-[📖 中文](README.md) · [GitHub](https://github.com/AI4MSE/NavClaw) · [Technical Doc (CN)](docs/technical_CN.md)
+[📖 中文](README.md) · [GitHub](https://github.com/AI4MSE/NavClaw) · [Technical Doc (CN)](docs/technical_CN.md)· [Technical Doc (EN)](docs/technical_EN.md)
 
 ## Highlights
 

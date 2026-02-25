@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-NavClaw — 智能导航路线规划 / OpenSource Intelligent Route Planner for OpenClaw & More
+NavClaw — 个人出行AI导航助手 / OpenSource Intelligent Route Planner for OpenClaw & More
 
 🌐 https://navclaw.com (Reserved for Github Page)
 📦 https://github.com/AI4MSE/NavClaw
@@ -8,7 +8,7 @@ NavClaw — 智能导航路线规划 / OpenSource Intelligent Route Planner for 
 所有用户可调参数集中于此，修改后无需改动任何 Python 代码。
 All user-configurable parameters are here. No code changes needed.
 
-支持OpenClaw，支持高德导航 / Motivated and Support OpenClaw  | First supported platform: Amap
+支持OpenClaw，支持高德导航 后续 扩展其他 / Motivated and Support OpenClaw  | First supported platform: Amap
 
 Licensed under the Apache License, Version 2.0
 

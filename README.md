@@ -1,4 +1,4 @@
-# NavClaw 🦀 - 个人AI导航助手
+# NavClaw 🦀 - 个人出行AI导航助手
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8+-green.svg)](https://www.python.org/)
@@ -11,7 +11,7 @@
 
 首版支持高德，后续扩展 / First supported platform: **Amap 高德** · 你可以贡献来使它更多平台支持 / More coming soon & Wecome your contribution.
 
- [📖 English](README_EN.md) · [GitHub](https://github.com/AI4MSE/NavClaw) · [技术文档](docs/technical_CN.md)
+ [📖 English](README_EN.md) · [GitHub](https://github.com/AI4MSE/NavClaw) · [技术文档](docs/technical_CN.md) · [Technical Doc (EN)](docs/technical_EN.md)
 
 ## 核心特性 / Highlights
 
