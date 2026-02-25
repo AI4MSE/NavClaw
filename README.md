@@ -12,6 +12,12 @@
 
  [📖 English](README_EN.md) · [GitHub](https://github.com/AI4MSE/NavClaw) · [技术文档](docs/technical_CN.md) · [Technical Doc (EN)](docs/technical_EN.md)
 
+## 效果演示 / Demos
+
+![智能导航 极限搜索 智能绕行 一键跳转](img/Overview_Smart_Navi_Demo.png)
+
+
+
 ## 核心特性 / Highlights
 
 - 🔍 **极限搜索** — 多策略并发查询，可以短时间拿到**比如-高德官方-所有不同策略和推荐进行对比**，并生成数十种绕行组合， / Exhaustive search with dozens of bypass combinations
