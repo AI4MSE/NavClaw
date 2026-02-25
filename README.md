@@ -1,4 +1,4 @@
-# NavClaw 🦀 - 个人出行AI导航助手
+# NavClaw 🦀    个人出行AI导航助手
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Python 3.8+](https://img.shields.io/badge/Python-3.8+-green.svg)](https://www.python.org/)
