@@ -338,4 +338,4 @@ NavClaw/
 🌐 [NavClaw.com](https://navclaw.com)  Reserved for Github Page
 🦀 [ClawHub: navclaw](https://clawhub.ai/AI4MSE/navclaw)
 
-Email:NavClaw@NavClaw.com (FUN only. I may not have time to reply)
+Email:nuaa02@gmail.com (FUN only. I may not have time to reply) 
