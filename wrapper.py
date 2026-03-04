@@ -19,7 +19,7 @@ NavClaw Wrapper - 调用 navclaw.py 并发送结果到聊天平台
 
 Licensed under the Apache License, Version 2.0
 
-作者小红书 @深度连接
+作者小红书 @深度连接 Email:nuaa02@gmail.com 
 """
 
 import sys
