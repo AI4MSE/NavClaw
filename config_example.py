@@ -12,7 +12,7 @@ All user-configurable parameters are here. No code changes needed.
 
 Licensed under the Apache License, Version 2.0
 
-作者小红书 @深度连接
+作者小红书 @深度连接 Email:nuaa02@gmail.com 
 """
 
 # ═══════════════════════════════════════════════════════════════════
