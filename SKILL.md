@@ -113,6 +113,5 @@ curl "https://restapi.amap.com/v3/config/district?key=$API_KEY&keywords=[城市�
 
 ---
 
-**作者**：小红书 @深度连接
 
 **更多信息**：[GitHub](https://github.com/AI4MSE/NavClaw) · [技术文档](docs/technical_CN.md) · 🌐 [NavClaw.com](https://navclaw.com) · 📧 Email:nuaa02@gmail.com （纯自娱自乐）
