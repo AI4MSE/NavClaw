@@ -111,6 +111,5 @@ curl "https://restapi.amap.com/v3/config/district?key=$API_KEY&keywords=[city_or
 
 ---
 
-**Author**: @DeepJoint
 
 **More info**: [GitHub](https://github.com/AI4MSE/NavClaw) · [Technical docs](docs/technical_EN.md) · 🌐 [NavClaw.com](https://navclaw.com) · 📧 NavClaw@NavClaw.com (just for fun)
