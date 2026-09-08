@@ -11,8 +11,7 @@
 首版支持高德，后续扩展 / First supported platform: **Amap 高德** · 你可以贡献来使它更多平台支持 / More coming soon & Wecome your contribution.
 
  [📖 English](README_EN.md) · [GitHub](https://github.com/AI4MSE/NavClaw) · [技术文档](docs/technical_CN.md) · [Technical Doc (EN)](docs/technical_EN.md)
-
- 作者：nuaa02@gmail.com 小红书@深度连接 
+ 
 
 ## 效果演示 / Demos
 > Smart Navigation: 智能导航 极限搜索 智能绕行 一键跳转
@@ -365,4 +364,3 @@ NavClaw/
 
 
 [Apache License 2.0](LICENSE)
-Email:nuaa02@gmail.com 
